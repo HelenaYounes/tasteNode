@@ -11,10 +11,7 @@ app.get('/suggestionsData', (request, response) => {
   const url = 'https://tastedive.com/api/similar?q=red+hot+chili+peppers%2C+pulp+fiction&k=305528-helenayo-DC3O5ZEW';
   fetch(url)
     .then(res => res.json())
-    .then(json => {
-      // console.log(json));
-      response.send(json)
-    });
+    .then(json => response.render('templates/suggestionsList', {results: json.Similar.Results}));
 });
 
 app.get('/', function (req, res) {
