@@ -13,12 +13,20 @@ app.get('/suggestions', (request, response) => {
 });
 
 app.get('/', function (req, res) {
-  res.render('index', { title: 'Hey', message: 'Hello there!' })
-})
+  res.render('index', { title: 'TasteDiveAPI'})
+});
+
+app.get('/home', (req, res) => {
+  res.render('home');
+});
+
+app.get('/search', (req, res) => {
+  res.render('templates/suggestionsList');
+});
 
 app.set('view engine', 'pug');
 
 
-app.use(express.static('dist'))
+app.use(express.static('dist'));
 
 app.listen(5000);

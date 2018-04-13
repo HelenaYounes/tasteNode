@@ -1,1 +1,1 @@
-document.write('Hello Worldfdsfdsf!')
+document.write('Hello World!')
