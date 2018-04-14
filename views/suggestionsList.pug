@@ -1,0 +1,12 @@
+extends layout
+block contents
+  h1 suggestions list component
+  if results
+    ul
+      each result in results
+        li= result.Name
+          ul
+            li= result.Type
+      
+    
+    
