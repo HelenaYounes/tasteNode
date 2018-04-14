@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
   res.render('home');
 });
 
-app.post('/suggestion', (req, response) => {
+app.post('/', (req, response) => {
   const id = req.body.suggestion
   response.redirect(`suggestion/${id}`)
 });
